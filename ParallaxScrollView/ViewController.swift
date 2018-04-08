@@ -12,7 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let scrollView = PLScrollView(frame: self.view.bounds)
+        self.view.addSubview(scrollView)
+        scrollView.setImages(["750","back","p750-1334"])
+        scrollView.animatedOffset = 50
+        scrollView.animated = true
     }
 
     override func didReceiveMemoryWarning() {
